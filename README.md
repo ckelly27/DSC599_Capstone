@@ -58,8 +58,6 @@ The Chameleon dataset includes both real and AI-generated samples produced by mu
 4. **Explainability:**  
    Grad-CAM was applied to visualize which image regions influenced the model’s predictions.
 
-   ![grad cam prediction explanation](figures/grad_cam.png)
-
 ---
 
 ## Results
@@ -77,4 +75,4 @@ Testing on the Chameleon dataset demonstrated that while the model generalizes s
 Grad-CAM was used to produce **class activation maps**, highlighting which parts of the image most strongly influenced the model’s decision.  
 This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
 
-Example visualization:
+![grad cam prediction explanation](figures/grad_cam.png)
