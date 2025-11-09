@@ -69,6 +69,8 @@ Testing on the Chameleon dataset demonstrated that while the model generalizes s
 | Testing Accuracy | 0.8512 |
 | Test Accuracy (Chameleon) | 0.5620 |
 
+![grad cam prediction explanation](figures/simple_metrics.png)
+
 ---
 
 ## Visualization (Grad-CAM)
