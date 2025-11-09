@@ -63,11 +63,8 @@ Testing on the Chameleon dataset demonstrated that while the model generalizes s
 
 | Metric | Value |
 |--------|--------|
-| Training Accuracy | ~XX% |
-| Validation Accuracy | ~XX% |
-| Test Accuracy (Chameleon) | ~XX% |
-
-*(Replace XX% with actual results once available)*
+| Testing Accuracy | 0.8512 |
+| Test Accuracy (Chameleon) | 0.5620 |
 
 ---
 
