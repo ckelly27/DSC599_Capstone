@@ -3,6 +3,9 @@
 This project aims to*detect AI-generated images using deep learning techniques. With the rapid rise of generative models, distinguishing between real and AI-generated images has become an increasingly important and challenging task.  
 Our detector uses a convolutional neural network (CNN) trained on real and AI-generated images to classify whether an input image is **real** or **AI-generated**.
 
+![Ai generated image vs authentic image](https://photutorial.com/wp-content/uploads/2024/07/a-hero-image-comparing-real-and-ai-generated-portraits-side-by-side.jpg)
+*Source: https://photutorial.com/ai-image-generators-transforming-stock-photo-industry/*
+
 ---
 
 ## Table of Contents
