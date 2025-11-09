@@ -58,6 +58,8 @@ The Chameleon dataset includes both real and AI-generated samples produced by mu
 4. **Explainability:**  
    Grad-CAM was applied to visualize which image regions influenced the model’s predictions.
 
+   ![grad cam prediction explanation](figures/grad_cam.png)
+
 ---
 
 ## Results
