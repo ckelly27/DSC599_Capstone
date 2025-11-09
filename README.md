@@ -34,7 +34,7 @@ The goal is to explore how well machine learning can differentiate between authe
 ## Dataset
 The project currently uses:
 - **Training data:** A curated mix of real and AI-generated images.
-- **Testing data:** The [**Chameleon Dataset**](https://chameleon.ait.ethz.ch/) — a challenging benchmark designed for detecting generated content.
+- **Testing data:** The [**Chameleon Dataset**]([https://chameleon.ait.ethz.ch/](https://github.com/shilinyan99/AIDE)) — a challenging benchmark designed for detecting generated content.
 
 The Chameleon dataset includes both real and AI-generated samples produced by multiple modern generative models, providing a diverse test set.
 
