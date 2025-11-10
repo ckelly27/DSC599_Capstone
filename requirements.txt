@@ -1,0 +1,18 @@
+# Core data libraries
+pandas
+numpy
+matplotlib
+seaborn
+tqdm
+
+# Machine learning
+scikit-learn
+tensorflow
+keras
+
+# Image processing
+opencv-python
+Pillow
+
+# Environment
+google-colab
