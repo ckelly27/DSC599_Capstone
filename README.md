@@ -13,12 +13,11 @@ Our detector uses a convolutional neural network (CNN) trained on real and AI-ge
 - [Dataset](#dataset)
 - [Methodology](#methodology)
 - [Results](#results)
+  - [Simple Model](#simple-model)
+  - [Transfer Learning Model](#transfer-learning-model)
 - [Visualization (Grad-CAM)](#visualization-grad-cam)
 - [Testing on Chameleon Dataset](#testing-on-chameleon-dataset)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Future Work](#future-work)
-- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -58,9 +57,14 @@ The Chameleon dataset includes both real and AI-generated samples produced by mu
 4. **Explainability:**  
    Grad-CAM was applied to visualize which image regions influenced the model’s predictions.
 
+![Block diagram approach](figures/approach.png)
+
 ---
 
 ## Results
+
+### Simple Model
+
 Initial experiments with the simple CNN achieved promising accuracy on the validation set.  
 Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness.
 
