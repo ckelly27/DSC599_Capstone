@@ -82,3 +82,4 @@ This helps interpret model behavior and verify that it focuses on meaningful fea
 ## Testing on Chameleon Dataset
 The trained model was evaluated on the **Chameleon dataset**, which contains images from various generative models (e.g., StyleGAN, Stable Diffusion, DALL·E).  
 Results suggest the model detects many AI-generated patterns but struggles with highly photorealistic synthetic images.
+![Simple model chameleon confusion matrix(figures/simple_chameleon_confusion.png)
