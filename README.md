@@ -78,3 +78,7 @@ Grad-CAM was used to produce **class activation maps**, highlighting which parts
 This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
 
 ![grad cam prediction explanation](figures/grad_cam.png)
+
+## Testing on Chameleon Dataset
+The trained model was evaluated on the **Chameleon dataset**, which contains images from various generative models (e.g., StyleGAN, Stable Diffusion, DALL·E).  
+Results suggest the model detects many AI-generated patterns but struggles with highly photorealistic synthetic images.
