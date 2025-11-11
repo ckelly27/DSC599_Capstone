@@ -91,7 +91,7 @@ Results suggest the model detects many AI-generated patterns but struggles with 
 
 ## Installation
  ```bash
-git clone [https://github.com/username/repo-name.git](https://github.com/ckelly27/DSC599_Capstone.git)
+git clone https://github.com/ckelly27/DSC599_Capstone.git
 cd DSC599_Capstone
 pip install -r requirements.txt
 ```
