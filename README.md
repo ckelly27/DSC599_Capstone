@@ -88,3 +88,13 @@ The trained model was evaluated on the **Chameleon dataset**, which contains ima
 Results suggest the model detects many AI-generated patterns but struggles with highly photorealistic synthetic images.
 
 ![Simple model chameleon confusion matrix](figures/simple_chameleon_confusion.png)
+
+## Installation
+ ```bash
+git clone [https://github.com/username/repo-name.git](https://github.com/ckelly27/DSC599_Capstone.git)
+cd DSC599_Capstone
+pip install -r requirements.txt
+```
+
+Alternatively, visit this link to the Google Colab document: [Google Colab](https://colab.research.google.com/drive/1AUaz-ZqG27AqcERgQnWXXZv8bhOnhyNp#scrollTo=KdxeiS3QVYR4)
+
