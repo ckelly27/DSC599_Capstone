@@ -57,6 +57,9 @@ The Chameleon dataset includes both real and AI-generated samples produced by mu
 4. **Explainability:**  
    Grad-CAM was applied to visualize which image regions influenced the model’s predictions.
 
+5. **Benchmark on Chameleon Dataset:**  
+   Each model will be evaluated on the **Chameleon dataset**, which contains images from various generative models (e.g., StyleGAN, Stable Diffusion, DALL·E). 
+
 ![Block diagram approach](figures/approach.png)
 
 ---
@@ -66,14 +69,17 @@ The Chameleon dataset includes both real and AI-generated samples produced by mu
 ### Simple Model
 
 Initial experiments with the simple CNN achieved promising accuracy on the validation set.  
-Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness.
 
-| Metric | Value |
-|--------|--------|
-| Testing Accuracy | 0.8512 |
-| Test Accuracy (Chameleon) | 0.5620 |
+| Class   | Precision | Recall | F1-Score | Support |
+|---------|-----------|--------|----------|---------|
+| Real    | 0.94      | 0.75   | 0.84     | 7995    |
+| AI-Gen  | 0.79      | 0.96   | 0.87     | 7995    |
 
-![grad cam prediction explanation](figures/simple_metrics.png)
+Testing Accuracy: 0.856
+
+![Simple model chameleon confusion matrix](figures/simple_confusion.png)
+
+![Simple model training metrics](figures/simple_metrics.png)
 
 ---
 
@@ -83,9 +89,15 @@ This helps interpret model behavior and verify that it focuses on meaningful fea
 
 ![grad cam prediction explanation](figures/grad_cam.png)
 
-## Testing on Chameleon Dataset
-The trained model was evaluated on the **Chameleon dataset**, which contains images from various generative models (e.g., StyleGAN, Stable Diffusion, DALL·E).  
-Results suggest the model detects many AI-generated patterns but struggles with highly photorealistic synthetic images.
+## Testing on Chameleon Dataset 
+Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness. 
+
+| Class   | Precision | Recall | F1-Score | Support |
+|---------|-----------|--------|----------|---------|
+| Real    | 0.55      | 0.70   | 0.61     | 5000    |
+| AI-Gen  | 0.58      | 0.43   | 0.49     | 5000    |
+
+Benchmark Testing Accuracy: 0.562
 
 ![Simple model chameleon confusion matrix](figures/simple_chameleon_confusion.png)
 
