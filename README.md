@@ -14,9 +14,13 @@ Our detector uses a convolutional neural network (CNN) trained on real and AI-ge
 - [Methodology](#methodology)
 - [Results](#results)
   - [Simple Model](#simple-model)
+    - [Simple Model Metrics](#simple-model-metrics)
+    - [Simple Model Visualization (Grad-CAM)](#visualization-grad-cam-simple)
+    - [Simple Model Chameleon Benchmark](#testing-on-chameleon-dataset-simple)
   - [Transfer Learning Model](#transfer-learning-model)
-- [Visualization (Grad-CAM)](#visualization-grad-cam)
-- [Testing on Chameleon Dataset](#testing-on-chameleon-dataset)
+    - [Transfer Model Metrics](#transfer-model-metrics)
+    - [Transfer Model Visualization (Grad-CAM)](#visualization-grad-cam-trasnfer)
+    - [Transfer Model Chameleon Benchmark](#testing-on-chameleon-dataset-transfer)
 - [Installation](#installation)
 
 ---
@@ -68,6 +72,8 @@ The Chameleon dataset includes both real and AI-generated samples produced by mu
 
 ### Simple Model
 
+#### Simple Model Metrics
+
 Initial experiments with the simple CNN achieved promising accuracy on the validation set.  
 
 | Class   | Precision | Recall | F1-Score | Support |
@@ -83,13 +89,52 @@ Testing Accuracy: 0.856
 
 ---
 
-## Visualization (Grad-CAM)
+#### Simple Model Visualization (Grad-CAM)
 Grad-CAM was used to produce **class activation maps**, highlighting which parts of the image most strongly influenced the model’s decision.  
 This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
 
 ![grad cam prediction explanation](figures/grad_cam.png)
 
-## Testing on Chameleon Dataset 
+#### Simple Model Chameleon Benchmark
+Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness. 
+
+| Class   | Precision | Recall | F1-Score | Support |
+|---------|-----------|--------|----------|---------|
+| Real    | 0.55      | 0.70   | 0.61     | 5000    |
+| AI-Gen  | 0.58      | 0.43   | 0.49     | 5000    |
+
+Benchmark Testing Accuracy: 0.562
+
+![Simple model chameleon confusion matrix](figures/simple_chameleon_confusion.png)
+
+---
+
+### Transfer Model
+
+#### Transfer Model Metrics
+
+Initial experiments with the simple CNN achieved promising accuracy on the validation set.  
+
+| Class   | Precision | Recall | F1-Score | Support |
+|---------|-----------|--------|----------|---------|
+| Real    | 0.94      | 0.75   | 0.84     | 7995    |
+| AI-Gen  | 0.79      | 0.96   | 0.87     | 7995    |
+
+Testing Accuracy: 0.856
+
+![Simple model chameleon confusion matrix](figures/simple_confusion.png)
+
+![Simple model training metrics](figures/simple_metrics.png)
+
+---
+
+#### Transfer Model Visualization (Grad-CAM)
+Grad-CAM was used to produce **class activation maps**, highlighting which parts of the image most strongly influenced the model’s decision.  
+This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
+
+![grad cam prediction explanation](figures/grad_cam.png)
+
+#### Transfer Model Chameleon Benchmark
 Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness. 
 
 | Class   | Precision | Recall | F1-Score | Support |
