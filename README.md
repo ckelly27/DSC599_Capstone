@@ -124,7 +124,8 @@ Testing Accuracy: 0.856
 
 ![Simple model chameleon confusion matrix](figures/simple_confusion.png)
 
-![Simple model training metrics](figures/simple_metrics.png)
+![Transfer model training metrics (pre-ft)](figures/transfer_pre_ft.png)
+![Transfer model training metrics (post-ft)](figures/transfer_post_ft.png)
 
 ---
 
