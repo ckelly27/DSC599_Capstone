@@ -35,11 +35,11 @@ The goal is to explore how well machine learning can differentiate between authe
 ---
 
 ## Dataset
-The project currently uses:
-- **Training data:** A curated mix of real and AI-generated images.
-- **Testing data:** The [**Chameleon Dataset**]([https://chameleon.ait.ethz.ch/](https://github.com/shilinyan99/AIDE)) — a challenging benchmark designed for detecting generated content.
+The project currently uses the CIFAKE dataset for model training. This is a dataset containing 120,000 (32x32) images:
 
-The Chameleon dataset includes both real and AI-generated samples produced by multiple modern generative models, providing a diverse test set.
+![Sample of training data](figures/sample.png)
+
+A benchmark dataset, called the The [**Chameleon Dataset**]([https://chameleon.ait.ethz.ch/](https://github.com/shilinyan99/AIDE)) was used to further evaluate the models. This is a challenging benchmark that contains realistic, inauthentic images that often fool humans. 
 
 ---
 
@@ -96,7 +96,7 @@ This helps interpret model behavior and verify that it focuses on meaningful fea
 ![grad cam prediction explanation](figures/grad_cam.png)
 
 #### Simple Model Chameleon Benchmark
-Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness. 
+Testing on the Chameleon dataset demonstrated that while the model exhibits poor generalization to unseen generative styles. The results show that the simple model often mistook ai-generated images for authentic ones, achieving a recall of 0.26 for the ai-generated class. 
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
@@ -113,7 +113,7 @@ Benchmark Testing Accuracy: 0.51
 
 #### Transfer Model Metrics
 
-Initial experiments with the simple CNN achieved promising accuracy on the validation set.  
+Initial experiments with the simple CNN demonstrated excellent performance on the validation set. Achieving a high test accuracy of 0.98, both real and ai-generated imagew were classified with near perfect precision, recall, and F1-scores. 
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
@@ -136,7 +136,7 @@ This helps interpret model behavior and verify that it focuses on meaningful fea
 ![grad cam prediction explanation](figures/grad_cam.png)
 
 #### Transfer Model Chameleon Benchmark
-Testing the transfer model on the Chameleon dataset demonstrated that the model fails to generalize across different datasets. It failed to distinguish well between authentic and inauthentic images.
+Testing the transfer model on the Chameleon dataset revealed that it struggles to generalize to unseen data. Although the model achieved high performance on the validation set, it failed to maintain this effectiveness when evaluated on the Chameleon benchmark. The model showed a strong bias toward predicting images as real, with a recall of 0.83 for the real class but only 0.20 for the AI-generated class. This imbalance indicates that while the model can reliably identify authentic images, it performs poorly in detecting AI-generated ones.
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
