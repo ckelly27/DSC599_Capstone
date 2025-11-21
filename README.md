@@ -78,10 +78,10 @@ Initial experiments with the simple CNN achieved promising accuracy on the valid
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
-| Real    | 0.94      | 0.75   | 0.84     | 7995    |
-| AI-Gen  | 0.79      | 0.96   | 0.87     | 7995    |
+| Real    | 0.95      | 0.85   | 0.90     | 10000    |
+| AI-Gen  | 0.86      | 0.96   | 0.91     | 10000    |
 
-Testing Accuracy: 0.856
+Testing Accuracy: 0.90
 
 ![Simple model chameleon confusion matrix](figures/simple_confusion.png)
 
@@ -100,10 +100,10 @@ Testing on the Chameleon dataset demonstrated that while the model generalizes s
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
-| Real    | 0.55      | 0.70   | 0.61     | 5000    |
-| AI-Gen  | 0.58      | 0.43   | 0.49     | 5000    |
+| Real    | 0.51      | 0.77   | 0.61     | 5000    |
+| AI-Gen  | 0.52      | 0.26   | 0.34     | 5000    |
 
-Benchmark Testing Accuracy: 0.562
+Benchmark Testing Accuracy: 0.51
 
 ![Simple model chameleon confusion matrix](figures/simple_chameleon_confusion.png)
 
@@ -117,10 +117,10 @@ Initial experiments with the simple CNN achieved promising accuracy on the valid
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
-| Real    | 0.94      | 0.75   | 0.84     | 7995    |
-| AI-Gen  | 0.79      | 0.96   | 0.87     | 7995    |
+| Real    | 0.98      | 0.98   | 0.98     | 10000    |
+| AI-Gen  | 0.98      | 0.98   | 0.98     | 10000    |
 
-Testing Accuracy: 0.856
+Testing Accuracy: 0.98
 
 ![Simple model chameleon confusion matrix](figures/transfer_training_cm.png)
 
@@ -140,10 +140,10 @@ Testing the transfer model on the Chameleon dataset demonstrated that the model 
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
-| Real    | 0.55      | 0.70   | 0.61     | 5000    |
-| AI-Gen  | 0.58      | 0.43   | 0.49     | 5000    |
+| Real    | 0.51      | 0.83   | 0.63     | 5000    |
+| AI-Gen  | 0.54      | 0.2   | 0.29     | 5000    |
 
-Benchmark Testing Accuracy: 0.562
+Benchmark Testing Accuracy: 0.52
 
 ![Simple model chameleon confusion matrix](figures/transfer_chameleon_cm.png)
 
