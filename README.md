@@ -122,7 +122,7 @@ Initial experiments with the simple CNN achieved promising accuracy on the valid
 
 Testing Accuracy: 0.856
 
-![Simple model chameleon confusion matrix](figures/simple_confusion.png)
+![Simple model chameleon confusion matrix](figures/transfer_training_cm.png)
 
 ![Transfer model training metrics (pre-ft)](figures/transfer_pre_ft.png)
 ![Transfer model training metrics (post-ft)](figures/transfer_post_ft.png)
