@@ -136,7 +136,7 @@ This helps interpret model behavior and verify that it focuses on meaningful fea
 ![grad cam prediction explanation](figures/grad_cam.png)
 
 #### Transfer Model Chameleon Benchmark
-Testing on the Chameleon dataset demonstrated that while the model generalizes somewhat to unseen generative styles, additional fine-tuning and data augmentation are needed for robustness. 
+Testing the transfer model on the Chameleon dataset demonstrated that the model fails to generalize across different datasets. It failed to distinguish well between authentic and inauthentic images.
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
@@ -145,7 +145,7 @@ Testing on the Chameleon dataset demonstrated that while the model generalizes s
 
 Benchmark Testing Accuracy: 0.562
 
-![Simple model chameleon confusion matrix](figures/simple_chameleon_confusion.png)
+![Simple model chameleon confusion matrix](figures/transfer_chameleon_cm.png)
 
 ## Installation
  ```bash
