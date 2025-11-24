@@ -159,4 +159,4 @@ Alternatively, visit this link to the Google Colab document: [Google Colab](http
 
 ## Video Demo
 
-[dsc599_demo](figures/dsc599_demo.mp4)
+[Watch the video](https://youtu.be/WOjE2m9pwj0)
