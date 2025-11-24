@@ -22,6 +22,7 @@ Our detector uses a convolutional neural network (CNN) trained on real and AI-ge
     - [Transfer Model Visualization (Grad-CAM)](#visualization-grad-cam-trasnfer)
     - [Transfer Model Chameleon Benchmark](#testing-on-chameleon-dataset-transfer)
 - [Installation](#installation)
+- [Video Demo](#demo)
 
 ---
 
@@ -156,3 +157,6 @@ pip install -r requirements.txt
 
 Alternatively, visit this link to the Google Colab document: [Google Colab](https://colab.research.google.com/drive/1AUaz-ZqG27AqcERgQnWXXZv8bhOnhyNp#scrollTo=KdxeiS3QVYR4)
 
+## Video Demo
+
+[dsc599_demo](figures/dsc599_demo)
