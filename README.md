@@ -130,8 +130,6 @@ Testing Accuracy: 0.95
 ---
 
 #### Transfer Model Visualization (Grad-CAM)
-Grad-CAM was used to produce **class activation maps**, highlighting which parts of the image most strongly influenced the model’s decision.  
-This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
 
 ![transfer grad cam prediction explanation](figures/transfer_cam.png)
 
