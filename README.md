@@ -77,6 +77,8 @@ A benchmark dataset, called the The [**Chameleon Dataset**]([https://chameleon.a
 
 Initial experiments with the simple CNN achieved promising accuracy on the validation set.  
 
+![Simple model training metrics](figures/simple_training_metrics.png)
+
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
 | Real    | 0.81      | 0.86   | 0.84     | 6400    |
@@ -84,9 +86,7 @@ Initial experiments with the simple CNN achieved promising accuracy on the valid
 
 Testing Accuracy: 0.83
 
-![Simple model chameleon confusion matrix](figures/simple_confusion.png)
-
-![Simple model training metrics](figures/simple_graphs.png)
+![Simple model testing_cm](figures/simple_testing_cm.png)
 
 ---
 
@@ -94,7 +94,7 @@ Testing Accuracy: 0.83
 Grad-CAM was used to produce **class activation maps**, highlighting which parts of the image most strongly influenced the model’s decision.  
 This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
 
-![grad cam prediction explanation](figures/grad_cam.png)
+![simple_cam](figures/simple_cam.png)
 
 #### Simple Model Chameleon Benchmark
 Testing on the Chameleon dataset demonstrated that while the model exhibits poor generalization to unseen generative styles. The results show that the simple model often mistook ai-generated images for authentic ones, achieving a recall of 0.26 for the ai-generated class. 
@@ -106,7 +106,7 @@ Testing on the Chameleon dataset demonstrated that while the model exhibits poor
 
 Benchmark Testing Accuracy: 0.42
 
-![Simple model chameleon confusion matrix](figures/simple_chameleon_confusion.png)
+![Simple model chameleon confusion matrix](figures/simple_benchmark_cm.png)
 
 ---
 
@@ -114,7 +114,9 @@ Benchmark Testing Accuracy: 0.42
 
 #### Transfer Model Metrics
 
-Initial experiments with the simple CNN demonstrated excellent performance on the validation set. Achieving a high test accuracy of 0.98, both real and ai-generated imagew were classified with near perfect precision, recall, and F1-scores. 
+Initial experiments with the simple CNN demonstrated excellent performance on the validation set. Achieving a high test accuracy of 0.95, both real and ai-generated imagew were classified with near perfect precision, recall, and F1-scores. 
+
+![transfer model training](figures/transfer_testing_cm.png)
 
 | Class   | Precision | Recall | F1-Score | Support |
 |---------|-----------|--------|----------|---------|
@@ -123,10 +125,7 @@ Initial experiments with the simple CNN demonstrated excellent performance on th
 
 Testing Accuracy: 0.95
 
-![Simple model chameleon confusion matrix](figures/transfer_training_cm.png)
-
-![Transfer model training metrics (pre-ft)](figures/transfer_pre_ft.png)
-![Transfer model training metrics (post-ft)](figures/transfer_post_ft.png)
+![Transfer testing cm](figures/transfer_testing_cm.png)
 
 ---
 
@@ -134,7 +133,7 @@ Testing Accuracy: 0.95
 Grad-CAM was used to produce **class activation maps**, highlighting which parts of the image most strongly influenced the model’s decision.  
 This helps interpret model behavior and verify that it focuses on meaningful features (e.g., texture artifacts, background inconsistencies, etc.).
 
-![grad cam prediction explanation](figures/grad_cam.png)
+![transfer grad cam prediction explanation](figures/transfer_cam.png)
 
 #### Transfer Model Chameleon Benchmark
 Testing the transfer model on the Chameleon dataset revealed that it struggles to generalize to unseen data. Although the model achieved high performance on the validation set, it failed to maintain this effectiveness when evaluated on the Chameleon benchmark. The model showed a strong bias toward predicting images as real, with a recall of 0.83 for the real class but only 0.20 for the AI-generated class. This imbalance indicates that while the model can reliably identify authentic images, it performs poorly in detecting AI-generated ones.
@@ -146,7 +145,7 @@ Testing the transfer model on the Chameleon dataset revealed that it struggles t
 
 Benchmark Testing Accuracy: 0.62
 
-![Simple model chameleon confusion matrix](figures/transfer_chameleon_cm.png)
+![Simple model chameleon confusion matrix](figures/transfer_benchmark_cm.png)
 
 ## Installation
  ```bash
